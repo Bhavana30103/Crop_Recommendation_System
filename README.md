@@ -1,32 +1,44 @@
 # 🌾 Crop Recommendation System using Machine Learning & Flask
 
-This project is a **Crop Recommendation System** that uses a **Machine Learning model** and a **Flask web application** to suggest the most suitable crop for cultivation based on soil nutrients and environmental conditions.
+A smart web-based **Crop Recommendation System** that suggests the most suitable crop for cultivation based on soil nutrients and environmental conditions.  
+This project combines **Machine Learning** and a **Flask web application** to make agriculture more data-driven and efficient.
 
 ---
 
-## 📖 Project Workflow 
+## 📖 Overview
 
-### **1. Problem Understanding**
-- Farmers often struggle to decide the best crop to grow based on soil fertility and weather conditions.
-- This system helps by predicting the ideal crop using data-driven insights.
+Farming decisions are often based on guesswork, which can lead to reduced yield.  
+This system helps farmers and researchers by predicting the **ideal crop** to cultivate, using parameters such as:
 
----
-
-### **2. Data Collection & Preprocessing**
-- Dataset containing soil nutrients (N, P, K), weather details (temperature, humidity, rainfall), and pH levels was used.  
-- Preprocessing steps:
-  - Handling missing values
-  - Normalizing data
-  - Feature engineering 
+- Nitrogen (N)
+- Phosphorus (P)
+- Potassium (K)
+- Temperature 🌡️
+- Humidity 💧
+- pH
+- Rainfall ☔
 
 ---
+
+## 🧠 Machine Learning Workflow
+
+### **1. Dataset**
+- Public dataset containing soil & environmental features
+- Target: **Crop label**
+
+### **2. Preprocessing**
+- Handled missing values  
+- Normalized features  
+- Converted data into ML-ready format  
 
 ### **3. Model Training**
-- A Machine Learning model (trained in Python using **scikit-learn**) was created.  
-- The trained model was saved using **Pickle** as `crop_recommendation_best.pkl`.  
+- Algorithms explored: Decision Tree, Random Forest, Naïve Bayes  
+- Best-performing model selected and trained  
+- Accuracy evaluated using test set  
 
+### **4. Save Model**
+- Final trained model saved using **Pickle**:
 ```python
 import pickle
-# Example: saving model after training
 pickle.dump(model, open("crop_recommendation_best.pkl", "wb"))
 
