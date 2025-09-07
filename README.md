@@ -17,7 +17,7 @@ This project is a **Crop Recommendation System** that uses a **Machine Learning 
 - Preprocessing steps:
   - Handling missing values
   - Normalizing data
-  - Feature engineering (if required)
+  - Feature engineering 
 
 ---
 
@@ -29,3 +29,4 @@ This project is a **Crop Recommendation System** that uses a **Machine Learning 
 import pickle
 # Example: saving model after training
 pickle.dump(model, open("crop_recommendation_best.pkl", "wb"))
+
